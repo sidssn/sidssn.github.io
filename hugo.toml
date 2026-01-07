@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = "https://sidssn.github.io/"
 languageCode = 'en-gb'
 title = 'Sid Expermiments'
 theme = 'maverick'
