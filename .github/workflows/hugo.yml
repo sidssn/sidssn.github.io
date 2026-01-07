@@ -1,22 +1,8 @@
-name: Deploy Hugo site to Pages
-
-on:
-  push:
-    branches: ["main"]
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    environment: github-pages
+
     steps:
       - uses: actions/checkout@v4
         with:
@@ -43,6 +29,3 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         id: deployment
-        environment:
-          name: github-pages
-          url: ${{ steps.pages.outputs.page_url }}
