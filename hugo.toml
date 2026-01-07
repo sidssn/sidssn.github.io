@@ -1,1 +1,17 @@
+baseURL = "http://localhost:1313/"
+languageCode = "en-gb"
+title = "Sid Experiments"
+theme = "maverick"
+[params]
+items = 5
+
+[permalinks]
+posts = "/posts/:slug/"
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = -200
 
