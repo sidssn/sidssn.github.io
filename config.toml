@@ -2,3 +2,10 @@ baseURL = "https://sidssn.github.io/"
 languageCode = 'en-gb'
 title = 'Sid Expermiments'
 theme = 'maverick'
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Post"
+    url = "/posts/"
+    weight = -200
