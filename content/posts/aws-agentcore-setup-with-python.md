@@ -43,7 +43,7 @@ At a high level, the system looks like this:
 - **Tools**:  
   - AWS context lookups  
   - reasoning helpers  
-- **Output**: A step-by-step troubleshooting guide
+- **Output**: A step-by-step troubleshooting guide provided to you by the agent in the form of a pre-signed URL uploaded to your S3 bucket in the input
 
 This tool-driven approach is what makes AgentCore especially interesting compared to simple prompt-based solutions.
 
