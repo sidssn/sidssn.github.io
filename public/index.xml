@@ -1,123 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    
-    <title>Sid Expermiments</title>
-    <description></description>
-    <link>http://localhost:1313/</link>
-    
+    <title>Home on </title>
+    <link>//localhost:1313/</link>
+    <description>Recent content in Home on </description>
+    <generator>Hugo</generator>
     <language>en</language>
-    
-    <copyright>Copyright 2026, </copyright>
     <lastBuildDate>Wed, 07 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <generator>Hugo - gohugo.io</generator>
-    <docs>http://cyber.harvard.edu/rss/rss.html</docs>
-    <atom:link href="http://localhost:1313//atom.xml" rel="self" type="application/atom+xml"/>
-    
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building an AWS Troubleshooting Guide Generator with Amazon AgentCore</title>
-      <link>http://localhost:1313/posts/aws-agentcore-setup-with-python/</link>
-      <description>&lt;h2 id=&#34;why-i-built-this&#34;&gt;Why I built this&lt;/h2&gt;
-&lt;p&gt;Troubleshooting AWS issues often means jumping between documentation, blog posts, and tribal knowledge.
-Even experienced engineers end up repeating the same diagnostic steps across services.&lt;/p&gt;
-&lt;p&gt;I wanted to explore whether &lt;strong&gt;Amazon AgentCore&lt;/strong&gt; could be used to:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;reason about AWS problems step by step&lt;/li&gt;
-&lt;li&gt;invoke the right tools at the right time&lt;/li&gt;
-&lt;li&gt;produce &lt;strong&gt;clear, structured troubleshooting guides&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;So I built a working prototype to test this idea end-to-end.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;what-this-project-does&#34;&gt;What this project does&lt;/h2&gt;
-&lt;p&gt;This project implements an &lt;strong&gt;AWS Troubleshooting Guide Generator&lt;/strong&gt; powered by Amazon AgentCore.&lt;/p&gt;
-&lt;p&gt;Given a problem description (for example, &lt;em&gt;“EC2 instance cannot reach the internet”&lt;/em&gt;), the agent:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;reasons about likely failure points&lt;/li&gt;
-&lt;li&gt;queries relevant AWS context&lt;/li&gt;
-&lt;li&gt;generates a structured troubleshooting guide with actionable steps&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;The goal is not to replace documentation, but to &lt;strong&gt;compress the time from problem → diagnosis&lt;/strong&gt;.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;architecture-overview&#34;&gt;Architecture overview&lt;/h2&gt;
-&lt;p&gt;At a high level, the system looks like this:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Input&lt;/strong&gt;: Natural language problem description&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;AgentCore agent&lt;/strong&gt;:
-&lt;ul&gt;
-&lt;li&gt;plans the troubleshooting strategy&lt;/li&gt;
-&lt;li&gt;selects tools dynamically&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Tools&lt;/strong&gt;:
-&lt;ul&gt;
-&lt;li&gt;AWS context lookups&lt;/li&gt;
-&lt;li&gt;reasoning helpers&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Output&lt;/strong&gt;: A step-by-step troubleshooting guide&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This tool-driven approach is what makes AgentCore especially interesting compared to simple prompt-based solutions.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;why-agentcore&#34;&gt;Why AgentCore?&lt;/h2&gt;
-&lt;p&gt;What stood out to me about AgentCore is its focus on &lt;strong&gt;reasoning + tool orchestration&lt;/strong&gt; rather than just text generation.&lt;/p&gt;
-&lt;p&gt;In this project, AgentCore enables:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;explicit reasoning steps&lt;/li&gt;
-&lt;li&gt;controlled tool invocation&lt;/li&gt;
-&lt;li&gt;reproducible behavior across runs&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This makes it much better suited for infrastructure and operational workflows than a single-prompt LLM setup.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;repository-and-code&#34;&gt;Repository and code&lt;/h2&gt;
-&lt;p&gt;The full implementation, including setup instructions and examples, is available here:&lt;/p&gt;
-&lt;p&gt;👉 &lt;strong&gt;GitHub repository&lt;/strong&gt;&lt;br&gt;
-&lt;a href=&#34;https://github.com/sidssn/aws-troubleshooting-guide-generator-example-with-agentcore&#34;&gt;https://github.com/sidssn/aws-troubleshooting-guide-generator-example-with-agentcore&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The repo includes:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;agent definition&lt;/li&gt;
-&lt;li&gt;tool configuration&lt;/li&gt;
-&lt;li&gt;example troubleshooting scenarios&lt;/li&gt;
-&lt;li&gt;instructions to run it locally&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;If you want to experiment with AgentCore, this should be a good starting point.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;how-to-try-it-yourself&#34;&gt;How to try it yourself&lt;/h2&gt;
-&lt;p&gt;In short:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Clone the repository&lt;/li&gt;
-&lt;li&gt;Configure your AWS credentials&lt;/li&gt;
-&lt;li&gt;Follow the setup instructions in the README&lt;/li&gt;
-&lt;li&gt;Run the agent with a sample AWS issue&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;You should be able to get a working example running in under 10 minutes.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;lessons-learned&#34;&gt;Lessons learned&lt;/h2&gt;
-&lt;p&gt;A few takeaways from building this:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;AgentCore works best when tools are &lt;strong&gt;narrow and well-defined&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Explicit reasoning steps make debugging agent behavior much easier&lt;/li&gt;
-&lt;li&gt;This approach feels especially promising for &lt;strong&gt;cloud operations and DevOps workflows&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;There is still a lot of room to experiment, but the foundation is solid.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;whats-next&#34;&gt;What’s next&lt;/h2&gt;
-&lt;p&gt;I plan to:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;add more troubleshooting scenarios&lt;/li&gt;
-&lt;li&gt;refine the reasoning strategy&lt;/li&gt;
-&lt;li&gt;explore integrations with real-time AWS telemetry&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;If you’re experimenting with AgentCore or agentic workflows, I’d love to hear what you’re building.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;final-thoughts&#34;&gt;Final thoughts&lt;/h2&gt;
-&lt;p&gt;AgentCore opens up an interesting design space for operational tooling.
-This project is a small step, but it shows how agentic systems can help reduce cognitive load in complex cloud environments.&lt;/p&gt;
-&lt;p&gt;If this sounds useful, feel free to try it out or contribute.&lt;/p&gt;
-&lt;h2 id=&#34;thanks-for-reading&#34;&gt;Thanks for reading.&lt;/h2&gt;
-</description>
-      <author></author>
-      <guid>http://localhost:1313/posts/aws-agentcore-setup-with-python/</guid>
+      <link>//localhost:1313/posts/aws-agentcore-setup-with-python/</link>
       <pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/aws-agentcore-setup-with-python/</guid>
+      <description>&lt;h2 id=&#34;why-i-built-this&#34;&gt;Why I built this&lt;/h2&gt;&#xA;&lt;p&gt;Troubleshooting AWS issues often means jumping between documentation, blog posts, and tribal knowledge.&#xA;Even experienced engineers end up repeating the same diagnostic steps across services.&lt;/p&gt;&#xA;&lt;p&gt;I wanted to explore whether &lt;strong&gt;Amazon AgentCore&lt;/strong&gt; could be used to:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;reason about AWS problems step by step&lt;/li&gt;&#xA;&lt;li&gt;invoke the right tools at the right time&lt;/li&gt;&#xA;&lt;li&gt;produce &lt;strong&gt;clear, structured troubleshooting guides&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;So I built a working prototype to test this idea end-to-end.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
