@@ -3,6 +3,9 @@ languageCode = 'en-gb'
 title = 'Sid Expermiments'
 theme = 'maverick'
 
+[permalinks]
+posts = "/posts/:slug/"
+
 [menu]
   [[menu.main]]
     identifier = "posts"
