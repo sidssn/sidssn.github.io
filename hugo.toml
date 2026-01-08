@@ -7,11 +7,17 @@ items = 5
 
 [permalinks]
 posts = "/posts/:slug/"
+about = "/about/:slug"
 
 [menu]
   [[menu.main]]
     identifier = "posts"
     name = "Posts"
     url = "/posts/"
+    weight = -200
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
     weight = -200
 

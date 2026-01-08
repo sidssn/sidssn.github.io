@@ -4,9 +4,12 @@ title: "Home"
 
 Hi, I’m Siddharth 👋
 
-I am a DevOps engineer and AWS enthusiast who loves to tinker with cloud infrastructure and serverless applications. I have been working in the tech industry for over 11 years, focusing on building scalable and reliable systems.
+This site is where I write about things I’m exploring and building, mostly around:
+- AWS and cloud architecture  
+- DevOps and operational workflows  
+- Automation, tooling, and reliability  
+- Agentic systems and practical uses of generative AI in infrastructure  
 
-I would love to connect on LinkedIn: [Siddharth Nair](https://www.linkedin.com/in/siddharth-nair-161b65a8/)
- 
+The focus here is on **hands-on learning and practical experimentation**, not theory for its own sake.
 
 👉 Please check out my latest posts below
