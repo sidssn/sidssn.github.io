@@ -98,6 +98,15 @@ You should be able to get a working example running in under 10 minutes.
 
 ---
 
+## Observability and debugging
+
+One of the biggest advantages of AgentCore over traditional LLM prompting is **OOTB - Observability Out-of-the-Box**.
+All you need to do is enable `Transaction Search` for your account and that's it! You can then view your agent runtime traces in AWS CloudWatch under `GenAI Observability` -> `Bedrock AgentCore`.
+
+![alt text](../traces.png)
+
+---
+
 ## Limitations and failure modes
 
 Like any LLM-driven system, this agent can be confidently wrong.
@@ -107,6 +116,8 @@ To reduce that risk, the design intentionally keeps tools narrow and determinist
 This does not replace human judgment. Instead, it acts as a force multiplier: helping engineers reach the *right questions* faster, even if the final validation is still done manually.
 
 I don’t claim this approach is universally better than traditional troubleshooting. Where it shows clear value is in early-stage diagnosis, especially for unfamiliar services or failure modes.
+
+Observability and Metrics for AgentCore Runtime is still evolving. At the time of writing, it is only available in us-east-1 region. As AgentCore matures, I expect the observability story to improve further.
 
 ---
 
